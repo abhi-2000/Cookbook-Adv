@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.gsangwan.cookbook.presenter.ui.base.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishesFragment"
+        android:name="com.gsangwan.cookbook.presenter.ui.base.DishesFragment"
+        android:label="fragment_dishes"
+        tools:layout="@layout/fragment_dishes" >
+        <action
+            android:id="@+id/action_dishesFragment_to_recepieFragment"
+            app:destination="@id/recepieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gsangwan.cookbook.presenter.ui.base.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dishesFragment"
+            app:destination="@id/dishesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recepieFragment"
+            app:destination="@id/recepieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recepieFragment"
+        android:name="com.gsangwan.cookbook.presenter.ui.base.RecepieFragment"
+        android:label="fragment_recepie"
+        tools:layout="@layout/fragment_recepie" />
+</navigation>
